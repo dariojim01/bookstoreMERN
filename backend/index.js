@@ -13,15 +13,15 @@ app.use(express.json());
 //Opcion 1 any
 app.use(cors());
 //Opcion 2 options
-app.use(cors({
+/* app.use(cors({
     origin: "http://localhost:3000",
     methods: ['GET', 'PUT', 'POST','DELETE'],
     allowedHeaders: ['Content-Type']
-}));
+})); */
 
 
 app.get('/', (req, res)=>{
-    console.log(req);
+   // console.log(req);
     return res.status(234).send("WELCOME MERN DJ");
 });
 
