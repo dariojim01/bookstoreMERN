@@ -1,6 +1,6 @@
 import express from "express";
 import { PORT } from "./config.js";
-import { URLDB } from "./config.js";
+//import { URLDB } from "./config.js";
 import mongoose from "mongoose";
 import cors from "cors";
 import bookRoute from  "./routes/bookRoute.js";
@@ -27,7 +27,7 @@ app.get('/', (req, res)=>{
 app.use('/v1/books', bookRoute);
 
 mongoose
-    .connect(URLDB)
+    .connect(process.env.MONGODB_URL)
     .then(()=>{
         console.log("Conexion exitosa");
         app.listen(PORT, () =>{
