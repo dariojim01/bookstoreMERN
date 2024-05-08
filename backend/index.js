@@ -19,7 +19,6 @@ app.use(cors());
     allowedHeaders: ['Content-Type']
 })); */
 
-
 app.get('/', (req, res)=>{
    // console.log(req);
     return res.status(234).send("WELCOME MERN DJ");
