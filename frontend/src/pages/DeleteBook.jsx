@@ -15,7 +15,7 @@ const DeleteBook = () => {
     setLoading(true);
     
     axios
-      .delete(`http://localhost:5000/v1/books/${id}`)
+      .delete(`${import.meta.env.VITE_API_URL}/v1/books/${id}`)
       .then(() =>{
         setLoading(false);
         navigate('/');
